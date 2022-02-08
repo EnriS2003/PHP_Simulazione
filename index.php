@@ -15,15 +15,17 @@ $iva=($prezzo*22)/100;
 $prezzoIvato=$prezzo+$iva;
 $quantita=$row["quantita"];
 $prezzoTot=$prezzoIvato*$quantita;
+$prezzoFin+=$prezzoTot;
 
 $prezzo1=round($prezzo, 2);
 $prezzoIvato1=round($prezzoIvato, 2);
 $prezzoTot1=round($prezzoTot, 2);
 
 echo "<br>- - - - - - - - - - - - - - - - - - - - - - -<br>Prodotto= $prodotto"."<br>"."Prezzo senza iva= $prezzo1 €<br>".
-"Prezzo ivato= $prezzoIvato1 €<br>"."Quantità= $quantita<br><br>Prezzo totale=$prezzoTot1 €";
+"Prezzo ivato= $prezzoIvato1 €<br>"."Quantità= $quantita<br><br>Prezzo= $prezzoTot1 €";
 }
-echo "<br>- - - - - - - - - - - - - - - - - - - - - - -";
+$prezzoFin1=round($prezzoFin, 2);
+echo "<br>- - - - - - - - - - - - - - - - - - - - - - -<br>Prezzo Totale= $prezzoFin1 €<br>- - - - - - - - - - - - - - - - - - - - - - -";
 ?>
 <p>-----------------------------------------------------------------------------------------------------------------------</p>
 <?php
@@ -57,5 +59,3 @@ echo "<br>Totale degli importi di cui si vuole esigere il pagamento= $importiTot
 echo "<br>Somma degli importi= $importiTot1 €";
 }
 ?>
-
-
